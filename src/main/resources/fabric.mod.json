@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "mtpp",
+  "version": "${version}",
+
+  "name": "More Tools++",
+  "description": "Adds extra tools.",
+  "authors": [
+    "Berry",
+    "Allu"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/mtpp/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.berryheyy.mtpp.Mtpp"
+    ]
+  },
+  "mixins": [
+    "mtpp.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

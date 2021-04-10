@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.berryheyy.mtpp.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BlockMixin",
+    "LivingEntityMixin"
+  ],
+  "client": [
+    "ModelLoaderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
