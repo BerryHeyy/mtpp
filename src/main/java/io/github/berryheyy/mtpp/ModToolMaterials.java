@@ -8,8 +8,11 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    MAGMA(100, 400f, 0F, 1, 1, () -> {
+    MAGMA(Config.MAGMA_TOOL_MATERIAL_DURABILITY, Config.MAGMA_TOOL_MATERIAL_MINING_SPEED, 0F, Config.MAGMA_TOOL_MATERIAL_MINING_LEVEL, Config.MAGMA_TOOL_MATERIAL_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(Items.MAGMA_BLOCK);
+    }),
+    LAPIS(Config.LAPIS_TOOL_MATERIAL_DURABILITY, Config.LAPIS_TOOL_MATERIAL_MINING_SPEED, 0F, Config.LAPIS_TOOL_MATERIAL_MINING_LEVEL, Config.LAPIS_TOOL_MATERIAL_ENCHANTABILITY, () -> {
+        return Ingredient.ofItems(Items.LAPIS_BLOCK);
     });
 
 

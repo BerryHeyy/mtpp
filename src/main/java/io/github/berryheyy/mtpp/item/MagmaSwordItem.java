@@ -1,5 +1,6 @@
 package io.github.berryheyy.mtpp.item;
 
+import io.github.berryheyy.mtpp.Config;
 import io.github.berryheyy.mtpp.ModToolMaterials;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +15,7 @@ public class MagmaSwordItem extends SwordItem {
 
 
     public MagmaSwordItem() {
-        super(ModToolMaterials.MAGMA, 7, 7f, new Item.Settings().group(ItemGroup.TOOLS));
+        super(ModToolMaterials.MAGMA, Config.MAGMA_SWORD_ATTACK-1, (float) Config.MAGMA_SWORD_ATTACK_SPEED-4, new Item.Settings().group(ItemGroup.TOOLS));
     }
 
     @Override

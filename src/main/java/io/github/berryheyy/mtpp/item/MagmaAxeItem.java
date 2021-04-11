@@ -1,5 +1,6 @@
 package io.github.berryheyy.mtpp.item;
 
+import io.github.berryheyy.mtpp.Config;
 import io.github.berryheyy.mtpp.ModToolMaterials;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -10,7 +11,7 @@ import net.minecraft.world.World;
 public class MagmaAxeItem extends AxeItem {
 
     public MagmaAxeItem() {
-        super(ModToolMaterials.MAGMA, 9f, 7f, new Item.Settings().group(ItemGroup.TOOLS));
+        super(ModToolMaterials.MAGMA, (float) Config.MAGMA_AXE_ATTACK-1, (float) Config.MAGMA_AXE_ATTACK_SPEED-4, new Item.Settings().group(ItemGroup.TOOLS));
     }
 
     @Override

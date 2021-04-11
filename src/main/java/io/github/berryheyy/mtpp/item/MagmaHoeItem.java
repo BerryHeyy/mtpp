@@ -1,5 +1,6 @@
 package io.github.berryheyy.mtpp.item;
 
+import io.github.berryheyy.mtpp.Config;
 import io.github.berryheyy.mtpp.ModToolMaterials;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -9,7 +10,7 @@ import net.minecraft.world.World;
 
 public class MagmaHoeItem extends HoeItem {
     public MagmaHoeItem() {
-        super(ModToolMaterials.MAGMA, 2, 7f, new Item.Settings().group(ItemGroup.TOOLS));
+        super(ModToolMaterials.MAGMA, Config.MAGMA_HOE_ATTACK-1, (float) Config.MAGMA_HOE_ATTACK_SPEED-4, new Item.Settings().group(ItemGroup.TOOLS));
     }
 
     @Override
