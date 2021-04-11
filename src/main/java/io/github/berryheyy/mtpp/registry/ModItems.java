@@ -9,18 +9,18 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
 
+    public static final ShovelItem MAGMA_SHOVEL = new MagmaShovelItem();
     public static final PickaxeItem MAGMA_PICKAXE = new MagmaPickaxeItem();
     public static final AxeItem MAGMA_AXE = new MagmaAxeItem();
-    public static final ShovelItem MAGMA_SHOVEL = new MagmaShovelItem();
-    public static final SwordItem MAGMA_SWORD = new MagmaSwordItem();
     public static final HoeItem MAGMA_HOE = new MagmaHoeItem();
+    public static final SwordItem MAGMA_SWORD = new MagmaSwordItem();
 
     public static void init() {
+        registerTool(MAGMA_SHOVEL, "magma_shovel");
         registerTool(MAGMA_PICKAXE, "magma_pickaxe");
         registerTool(MAGMA_AXE, "magma_axe");
-        registerTool(MAGMA_SHOVEL, "magma_shovel");
-        registerTool(MAGMA_SWORD, "magma_sword");
         registerTool(MAGMA_HOE, "magma_hoe");
+        registerTool(MAGMA_SWORD, "magma_sword");
     }
 
     private static void registerTool(Item item, String name) {

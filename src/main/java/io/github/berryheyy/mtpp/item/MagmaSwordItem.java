@@ -2,10 +2,10 @@ package io.github.berryheyy.mtpp.item;
 
 import io.github.berryheyy.mtpp.Config;
 import io.github.berryheyy.mtpp.ModToolMaterials;
+import io.github.berryheyy.mtpp.Mtpp;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.math.BlockPos;
@@ -15,7 +15,7 @@ public class MagmaSwordItem extends SwordItem {
 
 
     public MagmaSwordItem() {
-        super(ModToolMaterials.MAGMA, Config.MAGMA_SWORD_ATTACK-1, (float) Config.MAGMA_SWORD_ATTACK_SPEED-4, new Item.Settings().group(ItemGroup.TOOLS));
+        super(ModToolMaterials.MAGMA, Config.MAGMA_SWORD_ATTACK-1, (float) Config.MAGMA_SWORD_ATTACK_SPEED-4, new Item.Settings().group(Mtpp.ITEM_GROUP));
     }
 
     @Override
