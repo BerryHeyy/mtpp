@@ -1,7 +1,15 @@
 {
+  "itemGroup.mtpp.tools": "More Tools++",
+
   "item.mtpp.magma_axe": "Magma Axe",
   "item.mtpp.magma_hoe": "Magma Hoe",
   "item.mtpp.magma_sword": "Magma Sword",
   "item.mtpp.magma_pickaxe": "Magma Pickaxe",
-  "item.mtpp.magma_shovel": "Magma Shovel"
+  "item.mtpp.magma_shovel": "Magma Shovel",
+
+  "item.mtpp.lapis_axe": "Lapis Axe",
+  "item.mtpp.lapis_hoe": "Lapis Hoe",
+  "item.mtpp.lapis_sword": "Lapis Sword",
+  "item.mtpp.lapis_pickaxe": "Lapis Pickaxe",
+  "item.mtpp.lapis_shovel": "Lapis Shovel"
 }

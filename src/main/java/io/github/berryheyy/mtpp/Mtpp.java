@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class Mtpp implements ModInitializer {
 
     public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
-            new Identifier(Reference.MOD_ID, "itemGroup"),
+            new Identifier(Reference.MOD_ID, "tools"),
             () -> new ItemStack(ModItems.MAGMA_HOE));
 
     public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);

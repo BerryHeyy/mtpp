@@ -15,12 +15,25 @@ public class ModItems {
     public static final HoeItem MAGMA_HOE = new MagmaHoeItem();
     public static final SwordItem MAGMA_SWORD = new MagmaSwordItem();
 
+    public static final ShovelItem LAPIS_SHOVEL = new LapisShovelItem();
+    public static final PickaxeItem LAPIS_PICKAXE = new LapisPickaxeItem();
+    public static final AxeItem LAPIS_AXE = new LapisAxeItem();
+    public static final HoeItem LAPIS_HOE = new LapisHoeItem();
+    public static final SwordItem LAPIS_SWORD = new LapisSwordItem();
+
     public static void init() {
         registerTool(MAGMA_SHOVEL, "magma_shovel");
         registerTool(MAGMA_PICKAXE, "magma_pickaxe");
         registerTool(MAGMA_AXE, "magma_axe");
         registerTool(MAGMA_HOE, "magma_hoe");
         registerTool(MAGMA_SWORD, "magma_sword");
+
+        registerTool(LAPIS_SHOVEL, "lapis_shovel");
+        registerTool(LAPIS_PICKAXE, "lapis_pickaxe");
+        registerTool(LAPIS_AXE, "lapis_axe");
+        registerTool(LAPIS_HOE, "lapis_hoe");
+        registerTool(LAPIS_SWORD, "lapis_sword");
+
     }
 
     private static void registerTool(Item item, String name) {

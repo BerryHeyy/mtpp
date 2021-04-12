@@ -2,7 +2,9 @@
 
 ## About
 
-A mod that adds more useful tools.
+Yet another mod that adds tools, but this time with a twist ;).
+This mod features powerful tools, which are easy to craft.
+Every added tool has its own consequences when you use it to balance them.
 
 ## Content
 
@@ -13,11 +15,13 @@ A mod that adds more useful tools.
     - Puts user on fire whenever used in any way
     - Low durability
 - Lapis Tools
-    - Fortune 3
+    - Multiplies block drops with current experience level of the player
     - Extremely low durability
-    - Extremely low mining speed
-- Redstone Tools
-    - Vein Miner
+    -
+    - The higher the multiplication, the higher the chance that the player will accidentally open a rift to an alternate
+      dimension where experience originates from. Also, the strength of the creatures that pour out of this rift is also
+      related to the level of multiplication, so is their number
+- **_More tools will be added in future updates_**
 
 ## License
 
