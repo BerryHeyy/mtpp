@@ -2,7 +2,9 @@ package io.github.berryheyy.mtpp.mixin;
 
 import io.github.berryheyy.mtpp.Mtpp;
 import io.github.berryheyy.mtpp.Reference;
+import io.github.berryheyy.mtpp.event.RiftEvents;
 import io.github.berryheyy.mtpp.registry.ModItems;
+import io.github.berryheyy.mtpp.registry.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -21,6 +23,7 @@ import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
@@ -69,32 +72,8 @@ public class BlockMixin {
                 playerEntity.addExperienceLevels(-dupeTimes);
 
                 // Determine if gate should be opened
-                if (new Random(world.getSeed() / world.getTime()).nextFloat() < (dupeTimes / 200f)) {
-
-                    BlockPos beginPos = playerEntity.getBlockPos();
-                    
-                    Random mobSummonRandom = new Random(world.getSeed() / world.getTime());
-                    for (int x = -4; x <= 4; x++)
-                        for (int y = 4; y >= 0; y--)
-                            for (int z = -4; z <= 4; z++) {
-                                world.setBlockState(beginPos.add(x, y, z), Blocks.AIR.getDefaultState());
-
-                                // Check to spawn mob
-                                if (mobSummonRandom.nextFloat() < (dupeTimes / 100f)) {
-                                    CompoundTag tag = new CompoundTag();
-                                    tag.putString("id", new Identifier("minecraft", "vex").toString());
-
-                                    BlockPos spawnPos = new BlockPos(beginPos.getX() + x, beginPos.getY() + y, beginPos.getZ() + z);
-                                    Entity vex = EntityType.loadEntityWithPassengers(tag, world, entity1 -> {
-                                        entity1.refreshPositionAndAngles(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ(), entity1.yaw, entity1.pitch);
-                                        return entity1;
-                                    });
-
-                                    ((MobEntity) vex).initialize(world, world.getLocalDifficulty(vex.getBlockPos()), SpawnReason.COMMAND, (EntityData) null, (CompoundTag) null);
-
-                                    world.spawnEntity(vex);
-                                }
-                            }
+                if (new Random(world.getSeed() / world.getTime()).nextFloat() < (dupeTimes / 100f)) {
+                    RiftEvents.openRift(playerEntity, world, dupeTimes);
                 }
 
                 ci.setReturnValue(stacks);

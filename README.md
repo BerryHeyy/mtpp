@@ -17,7 +17,6 @@ Every added tool has its own consequences when you use it to balance them.
 - Lapis Tools
     - Multiplies block drops with current experience level of the player
     - Extremely low durability
-    -
     - The higher the multiplication, the higher the chance that the player will accidentally open a rift to an alternate
       dimension where experience originates from. Also, the strength of the creatures that pour out of this rift is also
       related to the level of multiplication, so is their number

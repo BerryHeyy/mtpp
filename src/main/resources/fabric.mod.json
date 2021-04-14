@@ -7,7 +7,8 @@
   "description": "Adds extra tools.",
   "authors": [
     "Berry",
-    "Allu"
+    "Allu",
+    "NoahK"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -21,6 +22,9 @@
   "entrypoints": {
     "main": [
       "io.github.berryheyy.mtpp.Mtpp"
+    ],
+    "client": [
+      "io.github.berryheyy.mtpp.client.MtppClient"
     ]
   },
   "mixins": [
@@ -34,5 +38,6 @@
   },
   "suggests": {
     "another-mod": "*"
-  }
+  },
+  "accessWidener": "mtpp.accesswidener"
 }

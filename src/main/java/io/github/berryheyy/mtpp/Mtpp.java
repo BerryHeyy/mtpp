@@ -1,8 +1,6 @@
 package io.github.berryheyy.mtpp;
 
-import io.github.berryheyy.mtpp.registry.ModBlockEntities;
-import io.github.berryheyy.mtpp.registry.ModBlocks;
-import io.github.berryheyy.mtpp.registry.ModItems;
+import io.github.berryheyy.mtpp.registry.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -27,6 +25,9 @@ public class Mtpp implements ModInitializer {
         ModItems.init();
         ModBlocks.init();
         ModBlockEntities.init();
+
+        ModSoundEvents.init();
+        //ModParticleTypes.init();
     }
 
 }
