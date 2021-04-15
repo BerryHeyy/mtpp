@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MM",
+    "MR",
+    " R"
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:lapis_block"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mtpp:lapis_axe",
+    "count": 1
+  }
+}

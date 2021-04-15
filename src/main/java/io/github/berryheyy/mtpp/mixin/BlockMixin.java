@@ -56,7 +56,10 @@ public class BlockMixin {
             ci.cancel();
         }
 
-        if (stack.getItem().equals(ModItems.LAPIS_PICKAXE)) {
+        if (stack.getItem().equals(ModItems.MAGMA_PICKAXE) ||
+                stack.getItem().equals(ModItems.MAGMA_AXE) ||
+                stack.getItem().equals(ModItems.MAGMA_HOE) ||
+                stack.getItem().equals(ModItems.MAGMA_SHOVEL)) {
             if (entity instanceof PlayerEntity) {
                 LootContext.Builder builder = (new LootContext.Builder(world)).random(world.random).parameter(LootContextParameters.ORIGIN, Vec3d.ofCenter(pos)).parameter(LootContextParameters.TOOL, stack).optionalParameter(LootContextParameters.THIS_ENTITY, entity).optionalParameter(LootContextParameters.BLOCK_ENTITY, blockEntity);
                 List<ItemStack> stacks = state.getDroppedStacks(builder);

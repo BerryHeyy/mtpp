@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M",
+    "R",
+    "R"
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:lapis_block"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mtpp:lapis_shovel",
+    "count": 1
+  }
+}

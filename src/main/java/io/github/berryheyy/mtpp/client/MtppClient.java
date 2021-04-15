@@ -27,6 +27,9 @@ public class MtppClient implements ClientModInitializer {
 
         ClientPlayNetworking.registerGlobalReceiver(PacketManager.RIFT_EFFECT_CLIENT_PACKET_ID, ((client, handler, buf, responseSender) -> {
 
+
+
+
         }));
     }
 }
