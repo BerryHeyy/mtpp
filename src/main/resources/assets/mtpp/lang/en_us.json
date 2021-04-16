@@ -11,5 +11,11 @@
   "item.mtpp.lapis_hoe": "Lapis Hoe",
   "item.mtpp.lapis_sword": "Lapis Sword",
   "item.mtpp.lapis_pickaxe": "Lapis Pickaxe",
-  "item.mtpp.lapis_shovel": "Lapis Shovel"
+  "item.mtpp.lapis_shovel": "Lapis Shovel",
+
+  "item.mtpp.quartz_axe": "Quartz Axe",
+  "item.mtpp.quartz_hoe": "Quartz Hoe",
+  "item.mtpp.quartz_sword": "Quartz Sword",
+  "item.mtpp.quartz_pickaxe": "Quartz Pickaxe",
+  "item.mtpp.quartz_shovel": "Quartz Shovel"
 }

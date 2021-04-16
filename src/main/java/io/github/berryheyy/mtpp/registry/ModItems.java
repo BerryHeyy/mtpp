@@ -21,6 +21,12 @@ public class ModItems {
     public static final HoeItem LAPIS_HOE = new LapisHoeItem();
     public static final SwordItem LAPIS_SWORD = new LapisSwordItem();
 
+    public static final ShovelItem QUARTZ_SHOVEL = new QuartzShovelItem();
+    public static final PickaxeItem QUARTZ_PICKAXE = new QuartzPickaxeItem();
+    public static final AxeItem QUARTZ_AXE = new QuartzAxeItem();
+    public static final HoeItem QUARTZ_HOE = new QuartzHoeItem();
+    public static final SwordItem QUARTZ_SWORD = new QuartzSwordItem();
+
     public static void init() {
         registerTool(MAGMA_SHOVEL, "magma_shovel");
         registerTool(MAGMA_PICKAXE, "magma_pickaxe");
@@ -33,6 +39,12 @@ public class ModItems {
         registerTool(LAPIS_AXE, "lapis_axe");
         registerTool(LAPIS_HOE, "lapis_hoe");
         registerTool(LAPIS_SWORD, "lapis_sword");
+
+//        registerTool(QUARTZ_SHOVEL, "quartz_shovel");
+//        registerTool(QUARTZ_PICKAXE, "quartz_pickaxe");
+//        registerTool(QUARTZ_AXE, "quartz_axe");
+//        registerTool(QUARTZ_HOE, "quartz_hoe");
+//        registerTool(QUARTZ_SWORD, "quartz_sword");
 
     }
 

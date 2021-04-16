@@ -13,6 +13,9 @@ public enum ModToolMaterials implements ToolMaterial {
     }),
     LAPIS(Config.LAPIS_TOOL_MATERIAL_DURABILITY, Config.LAPIS_TOOL_MATERIAL_MINING_SPEED, 0F, Config.LAPIS_TOOL_MATERIAL_MINING_LEVEL, Config.LAPIS_TOOL_MATERIAL_ENCHANTABILITY, () -> {
         return Ingredient.ofItems(Items.LAPIS_BLOCK);
+    }),
+    QUARTZ(Config.QUARTZ_TOOL_MATERIAL_DURABILITY, Config.QUARTZ_TOOL_MATERIAL_MINING_SPEED, 0F, Config.QUARTZ_TOOL_MATERIAL_MINING_LEVEL, Config.QUARTZ_TOOL_MATERIAL_ENCHANTABILITY, () -> {
+        return Ingredient.ofItems(Items.QUARTZ_BLOCK);
     });
 
 
