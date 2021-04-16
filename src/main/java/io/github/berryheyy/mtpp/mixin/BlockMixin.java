@@ -26,9 +26,6 @@ import java.util.Random;
 @Mixin(Block.class)
 public abstract class BlockMixin {
 
-    @Shadow
-    protected abstract void dropExperience(ServerWorld world, BlockPos pos, int size);
-
     @Inject(
             at = @At("RETURN"),
             method = "getDroppedStacks(Lnet/minecraft/block/BlockState;Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/item/ItemStack;)Ljava/util/List;",
@@ -40,7 +37,13 @@ public abstract class BlockMixin {
             stack.getItem().equals(ModItems.MAGMA_AXE) ||
             stack.getItem().equals(ModItems.MAGMA_HOE) ||
             stack.getItem().equals(ModItems.MAGMA_SHOVEL) ||
-            stack.getItem().equals(ModItems.MAGMA_SWORD)) {
+            stack.getItem().equals(ModItems.MAGMA_SWORD) ||
+
+            stack.getItem().equals(ModItems.QUARTZ_PICKAXE) ||
+            stack.getItem().equals(ModItems.QUARTZ_AXE) ||
+            stack.getItem().equals(ModItems.QUARTZ_HOE) ||
+            stack.getItem().equals(ModItems.QUARTZ_SHOVEL) ||
+            stack.getItem().equals(ModItems.QUARTZ_SWORD)) {
             ci.setReturnValue(DefaultedList.ofSize(1, ItemStack.EMPTY));
             ci.cancel();
         }
@@ -77,6 +80,8 @@ public abstract class BlockMixin {
                 stack.getItem().equals(ModItems.QUARTZ_AXE) ||
                 stack.getItem().equals(ModItems.QUARTZ_HOE) ||
                 stack.getItem().equals(ModItems.QUARTZ_SHOVEL)) {
+
+
 
         }
     }

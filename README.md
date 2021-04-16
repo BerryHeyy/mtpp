@@ -63,6 +63,17 @@ These are specific to each tool, for example you can have the Quartz Axe have an
 
 **Note:** `<toolID>` is the ID of the item of a given tool. For example `mtpp:lapis_pickaxe`. You can see these by pressing F3 + Q to show advanced tooltips. Then hover over the item in your inventory and you'll see the ID. 
 
+****
+
+### Block-experience equivalence
+Currently, these configs are only used by the Quartz Tools. They specify how much experience should be dropped upon breaking a block. The configs are preloaded with some blocks, but if you want to add more yourself you can do so with the two following config keys.
+
+`expequi.block.<blockID>`  
+*Adds block to be converted into EXP. Check the config file for examples.`*
+
+`expequi.tag.<tagID>`  
+*Adds all the blocks in the given tag to be converted into EXP. You can see the tags if you press F3 and look at a block. Check the config file for examples.*
+
 
 
 ## License

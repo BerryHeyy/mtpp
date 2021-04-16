@@ -28,6 +28,9 @@ public abstract class LivingEntityMixin {
     @Shadow
     protected abstract void dropLoot(DamageSource source, boolean causedByPlayer);
 
+    @Shadow
+    protected abstract void dropXp();
+
     @Inject(
             at = @At("HEAD"),
             method = "drop(Lnet/minecraft/entity/damage/DamageSource;)V",
@@ -71,6 +74,16 @@ public abstract class LivingEntityMixin {
 
                     ci.cancel();
                 }
+            }
+
+            if (itemStack.getItem().equals(ModItems.QUARTZ_PICKAXE) ||
+                    itemStack.getItem().equals(ModItems.QUARTZ_AXE) ||
+                    itemStack.getItem().equals(ModItems.QUARTZ_HOE) ||
+                    itemStack.getItem().equals(ModItems.QUARTZ_SHOVEL) ||
+                    itemStack.getItem().equals(ModItems.QUARTZ_SWORD)) {
+
+                for (int i = 0; i < 3; i++) dropXp();
+                ci.cancel();
             }
         }
     }

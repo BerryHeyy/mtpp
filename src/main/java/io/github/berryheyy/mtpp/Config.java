@@ -1,6 +1,9 @@
 package io.github.berryheyy.mtpp;
 
+import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.tag.BlockTags;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.registry.Registry;
 
 public class Config {
@@ -12,7 +15,23 @@ public class Config {
     private static String getProvider(String namespace) {
         StringBuilder builder = new StringBuilder();
 
-        builder.append("expequi.minecraft:stone=\n");
+        builder.append("expequi.block.minecraft:dirt=1\n");
+        builder.append("expequi.block.minecraft:grass_block=1\n");
+        builder.append("expequi.block.minecraft:gravel=1\n");
+        builder.append("expequi.block.minecraft:coal_ore=4\n");
+        builder.append("expequi.block.minecraft:nether_gold_ore=2\n");
+        builder.append("expequi.block.minecraft:diamond_ore=14\n");
+        builder.append("expequi.block.minecraft:emerald_ore=14\n");
+        builder.append("expequi.block.minecraft:nether_quartz_ore=10\n");
+        builder.append("expequi.block.minecraft:lapis_ore=10\n");
+        builder.append("expequi.block.minecraft:redstone_ore=4\n");
+        builder.append("expequi.block.minecraft:spawner=86\n");
+        builder.append("expequi.block.minecraft:gold_ore=2\n");
+        builder.append("expequi.block.minecraft:iron_ore=1\n");
+
+        builder.append("expequi.tag.minecraft:logs=1\n");
+        builder.append("expequi.tag.minecraft:base_stone_overworld=1\n");
+        builder.append("expegui.tag.minecraft:sand=1\n");
 
         return builder.toString();
     }
@@ -56,7 +75,7 @@ public class Config {
     // Quartz
 
     public static final int QUARTZ_TOOL_MATERIAL_MINING_SPEED = CONFIG.getOrDefault("toolmaterial.quartz.mining_speed", 2);
-    public static final int QUARTZ_TOOL_MATERIAL_DURABILITY = CONFIG.getOrDefault("toolmaterial.quartz.durability", 10);
+    public static final int QUARTZ_TOOL_MATERIAL_DURABILITY = CONFIG.getOrDefault("toolmaterial.quartz.durability", 256);
     public static final int QUARTZ_TOOL_MATERIAL_MINING_LEVEL = CONFIG.getOrDefault("toolmaterial.quartz.mining_level", 2);
     public static final int QUARTZ_TOOL_MATERIAL_ENCHANTABILITY = CONFIG.getOrDefault("toolmaterial.quartz.enchantability", 1);
 
@@ -73,8 +92,26 @@ public class Config {
 
     // Quartz Block Exp Equivalents
 
+    /**
+     * Returns registered block experience equivalent. Checks block before tag.
+     *
+     * @param block
+     * @return experience associated with block
+     */
     public static int getBlockExpEquivalent(Block block) {
-        return CONFIG.getOrDefault("expequi." + Registry.BLOCK.getId(block), 0);
+
+        int blockExperience = CONFIG.getOrDefault("expequi.block." + Registry.BLOCK.getId(block), 0);
+
+        if (blockExperience > 0) return blockExperience;
+
+        for (Tag.Identified<Block> tag : BlockTags.getRequiredTags()) {
+            if (block.isIn(tag)) {
+                int tagExperience = CONFIG.getOrDefault("expequi.tag." + tag.getId(), 0);
+                if (tagExperience > 0) return tagExperience;
+            }
+        }
+
+        return 0;
     }
 
 }

@@ -1,3 +1,4 @@
 accessWidener v1 named
 
 accessible method net/minecraft/particle/DefaultParticleType <init> (Z)V
+accessible method net/minecraft/block/Block dropExperience (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;I)V

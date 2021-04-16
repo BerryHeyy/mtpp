@@ -10,4 +10,5 @@ public class QuartzSwordItem extends SwordItem {
     public QuartzSwordItem() {
         super(ModToolMaterials.QUARTZ, Config.QUARTZ_SWORD_ATTACK-1, (float) Config.QUARTZ_SWORD_ATTACK_SPEED-4, new Settings().group(Mtpp.ITEM_GROUP));
     }
+
 }

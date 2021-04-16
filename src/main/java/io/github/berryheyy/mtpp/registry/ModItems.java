@@ -40,11 +40,11 @@ public class ModItems {
         registerTool(LAPIS_HOE, "lapis_hoe");
         registerTool(LAPIS_SWORD, "lapis_sword");
 
-//        registerTool(QUARTZ_SHOVEL, "quartz_shovel");
-//        registerTool(QUARTZ_PICKAXE, "quartz_pickaxe");
-//        registerTool(QUARTZ_AXE, "quartz_axe");
-//        registerTool(QUARTZ_HOE, "quartz_hoe");
-//        registerTool(QUARTZ_SWORD, "quartz_sword");
+        registerTool(QUARTZ_SHOVEL, "quartz_shovel");
+        registerTool(QUARTZ_PICKAXE, "quartz_pickaxe");
+        registerTool(QUARTZ_AXE, "quartz_axe");
+        registerTool(QUARTZ_HOE, "quartz_hoe");
+        registerTool(QUARTZ_SWORD, "quartz_sword");
 
     }
 
