@@ -59,30 +59,22 @@ public abstract class BlockMixin {
                 PlayerEntity playerEntity = (PlayerEntity) entity;
 
                 int dupeTimes = ((PlayerEntity) entity).experienceLevel;
+                float dupeTimesPercentage = dupeTimes / 5f;
 
                 stacks.forEach(s -> {
-                    s.setCount(s.getCount() * dupeTimes);
+                    s.setCount(s.getCount() * dupeTimesPercentage > 1 ? 5 : dupeTimes);
                 });
 
                 playerEntity.addExperienceLevels(-dupeTimes);
 
                 // Determine if gate should be opened
-                if (new Random(world.getSeed() / world.getTime()).nextFloat() < (dupeTimes / 100f)) {
+                if (new Random(world.getSeed() / world.getTime()).nextFloat() < dupeTimesPercentage) {
                     RiftEvents.openRift(playerEntity, world, dupeTimes);
                 }
 
                 ci.setReturnValue(stacks);
                 ci.cancel();
             }
-        }
-
-        if (stack.getItem().equals(ModItems.QUARTZ_PICKAXE) ||
-                stack.getItem().equals(ModItems.QUARTZ_AXE) ||
-                stack.getItem().equals(ModItems.QUARTZ_HOE) ||
-                stack.getItem().equals(ModItems.QUARTZ_SHOVEL)) {
-
-
-
         }
     }
 }

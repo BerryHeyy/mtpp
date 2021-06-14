@@ -75,7 +75,7 @@ public class Config {
     // Quartz
 
     public static final int QUARTZ_TOOL_MATERIAL_MINING_SPEED = CONFIG.getOrDefault("toolmaterial.quartz.mining_speed", 2);
-    public static final int QUARTZ_TOOL_MATERIAL_DURABILITY = CONFIG.getOrDefault("toolmaterial.quartz.durability", 256);
+    public static final int QUARTZ_TOOL_MATERIAL_DURABILITY = CONFIG.getOrDefault("toolmaterial.quartz.durability", 8);
     public static final int QUARTZ_TOOL_MATERIAL_MINING_LEVEL = CONFIG.getOrDefault("toolmaterial.quartz.mining_level", 2);
     public static final int QUARTZ_TOOL_MATERIAL_ENCHANTABILITY = CONFIG.getOrDefault("toolmaterial.quartz.enchantability", 1);
 

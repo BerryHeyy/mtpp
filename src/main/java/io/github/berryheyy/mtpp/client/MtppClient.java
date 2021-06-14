@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class MtppClient implements ClientModInitializer {
 
-    static int INCREMENTOR = 1;
+    static int INCREMENTER = 1;
 
     @Override
     public void onInitializeClient() {
@@ -18,10 +18,10 @@ public class MtppClient implements ClientModInitializer {
             BlockPos pos = buf.readBlockPos();
 
             client.execute(() ->{
-                Random random = new Random(System.currentTimeMillis()/INCREMENTOR);
+                Random random = new Random(System.currentTimeMillis()/ INCREMENTER);
 
                 client.world.addParticle(random.nextFloat() > 0.5f ? ParticleTypes.ENCHANT : ParticleTypes.ENCHANTED_HIT, pos.getX(), pos.getY(), pos.getZ(), random.nextFloat(), random.nextFloat(), random.nextFloat());
-                INCREMENTOR++;
+                INCREMENTER++;
             });
         }));
 
