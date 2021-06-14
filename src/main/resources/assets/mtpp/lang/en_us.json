@@ -17,5 +17,7 @@
   "item.mtpp.quartz_hoe": "Quartz Hoe",
   "item.mtpp.quartz_sword": "Quartz Sword",
   "item.mtpp.quartz_pickaxe": "Quartz Pickaxe",
-  "item.mtpp.quartz_shovel": "Quartz Shovel"
+  "item.mtpp.quartz_shovel": "Quartz Shovel",
+
+  "block.mtpp.experience_cluster": "Experience Cluster"
 }

@@ -36,6 +36,10 @@ public class Config {
         return builder.toString();
     }
 
+    // Misc
+
+    public static final int EXPERIENCE_CLUSTER_BREAK_EXPERIENCE_DROP = CONFIG.getOrDefault("block.experience_cluster.break_experience", 30);
+
     // Magma
 
     public static final int MAGMA_TOOL_MATERIAL_MINING_SPEED = CONFIG.getOrDefault("toolmaterial.magma.mining_speed", 400);

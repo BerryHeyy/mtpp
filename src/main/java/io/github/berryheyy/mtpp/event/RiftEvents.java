@@ -2,6 +2,7 @@ package io.github.berryheyy.mtpp.event;
 
 import io.github.berryheyy.mtpp.Mtpp;
 import io.github.berryheyy.mtpp.network.PacketManager;
+import io.github.berryheyy.mtpp.registry.ModBlocks;
 import io.github.berryheyy.mtpp.registry.ModSoundEvents;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -35,15 +36,22 @@ public class RiftEvents {
             @Override
             public void run() {
                 BlockPos beginPos = playerEntity.getBlockPos();
-                Random mobSummonRandom = new Random(world.getSeed() / world.getTime());
-                for (int x = -4; x <= 4; x++)
-                    for (int y = 4; y >= 0; y--)
-                        for (int z = -4; z <= 4; z++) {
+                Random random = new Random(world.getSeed() / world.getTime());
+                for (int x = -5; x <= 5; x++)
+                    for (int y = 5; y >= 0; y--)
+                        for (int z = -5; z <= 5; z++) {
+                            if (x == -5 || x == 5 || y == 5 || z == -5 || z == 5)
+                            {
+                                if (random.nextFloat() < (dupeTimes / (dupeTimes > 10 ? 2000f : 300f)) && world.getBlockState(beginPos.add(x, y, z)).getBlock() != Blocks.AIR)
+                                    world.setBlockState(beginPos.add(x, y, z), ModBlocks.EXPERIENCE_CLUSTER_BLOCK.getDefaultState());
+                                continue;
+                            }
+
                             world.setBlockState(beginPos.add(x, y, z), Blocks.AIR.getDefaultState());
                             BlockPos currentPos = new BlockPos(beginPos.getX() + x, beginPos.getY() + y, beginPos.getZ() + z);
 
                             // Check to spawn mob
-                            if (mobSummonRandom.nextFloat() < (dupeTimes / 200f)) {
+                            if (random.nextFloat() < (dupeTimes / 200f)) {
                                 CompoundTag tag = new CompoundTag();
                                 tag.putString("id", new Identifier("minecraft", "vex").toString());
 
